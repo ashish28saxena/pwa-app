@@ -4,7 +4,6 @@ this.addEventListener("install",(event)=>{
     caches.open(cacheData).then((cache)=>{
         cache.addAll([
             '/static/js/bundle.js',
-            
             '/index.html',
             '/'
             
