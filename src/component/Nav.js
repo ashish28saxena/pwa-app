@@ -8,6 +8,8 @@ import { useSelector } from "react-redux";
 
 const Nav=()=>{
   const amount=useSelector(state=>state.amount)
+  const userresult=useSelector(state=>state.showuser)
+  console.log("!!!!!!!!!!!!!!!!!!!!!!",userresult);
     return(
         <div>
           <BrowserRouter>

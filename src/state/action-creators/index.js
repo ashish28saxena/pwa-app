@@ -23,3 +23,16 @@ export const withdrawMoney=(amount)=>{
 
      }
 }
+
+
+export const storeUser=(user)=>{
+        return (dispatch)=>{
+           dispatch({
+                   type:'storeuser',
+                   payload: user
+           }
+                   
+           )
+           
+        }
+   }
