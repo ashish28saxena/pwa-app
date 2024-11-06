@@ -2,9 +2,12 @@ import React from "react";
 import Home from './Home';
 import About from './About';
 import User from "./User";
+import Shop from "./Shop"; 
 import { BrowserRouter ,Link,Routes,Route} from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Nav=()=>{
+  const amount=useSelector(state=>state.amount)
     return(
         <div>
           <BrowserRouter>
@@ -21,6 +24,14 @@ const Nav=()=>{
         <li className="nav-item">
         <Link to="/user" className="nav-link">User</Link>
         </li>
+
+        <li className="nav-item">
+        <Link to="/shop" className="nav-link">Shop</Link>
+        </li>
+
+        <li className="nav-item">
+        <button className="nav-link bg-primary"> your Blance is : {amount}</button>
+        </li>
         
       </ul>
     </div>
@@ -29,6 +40,7 @@ const Nav=()=>{
     <Route path="/" element={<Home />}> </Route>
     <Route path="/about" element={<About />} />
     <Route path="/user" element={<User />} />
+    <Route path="/shop" element={<Shop/>} />
       
    
   </Routes>  
