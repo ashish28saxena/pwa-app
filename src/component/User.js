@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { actionCreators } from "../state/index"
 import Hero from "./Hero";
 import ErrorBoundary from "./ErrorBoundary";
+import Parent from "./Parent";
 const User=()=>{
     //const [getdata , setGetdata]=useState([]);
     const dispatch=useDispatch();
@@ -15,6 +16,11 @@ const User=()=>{
         //setGetdata(data.users);  
         
     }
+
+    function display()
+    {
+        console.log("hello i am display functiobn from parent componet");
+    }
     useEffect(() => {
       getuser();
       //console.log("******",getdata); 
@@ -23,7 +29,8 @@ const User=()=>{
         <div><h1>this is user component </h1>
         <ErrorBoundary>
         <Hero heroname="superman"/>
-        <Hero heroname="joker"/>
+        <Hero heroname="superman"/>
+        <Parent onEvent={display} />
 </ErrorBoundary>
        
         </div>
