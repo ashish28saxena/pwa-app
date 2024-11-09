@@ -7,9 +7,9 @@ function App() {
     <div className="App">
      <Nav/>
     
-      
+      <h1>this is app component</h1>
     </div>
   );
 }
 
-export default App; 
+export default App;   
