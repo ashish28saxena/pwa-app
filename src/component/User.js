@@ -29,7 +29,7 @@ const User=()=>{
         <div><h1>this is user component </h1>
         <ErrorBoundary>
         <Hero heroname="superman"/>
-        <Hero heroname="superman"/>
+        <Hero heroname="joker"/>
         <Parent onEvent={display} />
 </ErrorBoundary>
        
