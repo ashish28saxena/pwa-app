@@ -17,9 +17,9 @@ const User=()=>{
         
     }
 
-    function display()
+    function display(data)
     {
-        console.log("hello i am display functiobn from parent componet");
+        console.log("hello i am display functiobn from parent componet"+data);
     }
     useEffect(() => {
       getuser();
@@ -29,7 +29,7 @@ const User=()=>{
         <div><h1>this is user component </h1>
         <ErrorBoundary>
         <Hero heroname="superman"/>
-        <Hero heroname="joker"/>
+        <Hero heroname="superman"/>
         <Parent onEvent={display} />
 </ErrorBoundary>
        
