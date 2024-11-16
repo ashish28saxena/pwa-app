@@ -1,10 +1,10 @@
 import React from "react";
 
-const Childcomponent=()=>{
+const Childcomponent=(props)=>{
     return(
         <div>
-            <label id="example">example</label>
-            <h1>this is child componentDidCatch</h1>
+            <label id="example">example {props.name}  {props.email}</label>
+            <h1>{props.childern}</h1>
         </div>
     )
 }
